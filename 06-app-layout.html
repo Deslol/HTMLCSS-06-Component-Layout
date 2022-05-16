@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: sans-serif;
+        color: #343a40;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        height: 100vh;
+      }
+
+      nav {
+        background-color: #343a40;
+        color: #fff;
+        grid-row: 1/-1;
+      }
+
+      menu {
+        background-color: #7048e8;
+        color: #fff;
+        grid-column: 2/-1;
+      }
+
+      section {
+        background-color: #e9ecef;
+        /* padding: 40px; */
+      }
+
+      aside {
+        background-color: #e9ecef;
+      }
+
+      body {
+        display: grid;
+        grid-template-columns: 80px 400px 1fr 250px;
+        grid-template-rows: 80px 1fr;
+        justify-content: start;
+      }
+
+      nav,
+      menu,
+      section,
+      main,
+      aside {
+        padding-top: 24px;
+      }
+
+      .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 40px;
+      }
+
+      .function {
+        display: flex;
+        gap: 10px;
+      }
+
+      .btn {
+        font-size: 14px;
+        font-weight: 600;
+        border: none;
+        color: #fff;
+        background-color: #5f3dc4;
+        padding: 12px 8px;
+        cursor: pointer;
+      }
+
+      .btn--trash {
+        background-color: #e03131;
+        margin-left: auto;
+      }
+
+      section {
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+        gap: 40px;
+
+        list-style: none;
+        flex-shrink: 0;
+        overflow: scroll;
+      }
+
+      .email {
+        font-size: 18px;
+        font-weight: 700;
+        background-color: #adb5bd;
+        height: 96px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* padding: 40px; */
+      }
+    </style>
+  </head>
+  <body>
+    <nav>Nav</nav>
+    <menu class="menu">
+      <ul class="function">
+        <button class="btn btn--new">New</button>
+        <button class="btn btn--reply">Reply</button>
+        <button class="btn btn--forward">Forward</button>
+        <button class="btn btn--mark">Mark unread</button>
+      </ul>
+      <button class="btn btn--trash">Trash</button>
+    </menu>
+    <section>
+      <li class="email">Email 1</li>
+      <li class="email">Email 2</li>
+      <li class="email">Email 3</li>
+      <li class="email">Email 4</li>
+      <li class="email">Email 5</li>
+      <li class="email">Email 6</li>
+      <li class="email">Email 7</li>
+      <li class="email">Email 8</li>
+      <li class="email">Email 9</li>
+      <li class="email">Email 10</li>
+    </section>
+    <main>Email</main>
+    <aside>Additional info</aside>
+  </body>
+</html>
